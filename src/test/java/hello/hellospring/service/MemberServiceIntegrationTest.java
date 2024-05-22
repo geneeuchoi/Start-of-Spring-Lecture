@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -27,7 +28,7 @@ class MemberServiceIntegrationTest {
     void 회원가입() {
         //given 무언가가 주어짐(기반 데이터)
         Member member = new Member();
-        member.setName("반영이 안됩니다.");
+        member.setName("test");
         //when ~할 때(이 부분을 검증)
         Long saveId = memberService.join(member);
         //then ~이런 결과가 나와야 함(검증부)
